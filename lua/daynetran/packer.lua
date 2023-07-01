@@ -38,8 +38,13 @@ return require('packer').startup(function(use)
 	-- and switch between different undo branches
 	use { "mbbill/UndoTree" }
 
+	-- plugin for git. Enables :Git action
 	use { "tpope/vim-fugitive" }
 
+	-- bundle all the "boilerplate code" necessary to have nvim-cmp (a 
+	-- popular autocompletion plugin) and nvim-lspconfig working together. 
+	-- And if you opt in, it can use mason.nvim to let you install language
+	-- servers from inside neovim.
 	use {
 		'VonHeikemen/lsp-zero.nvim',
 		branch = 'v2.x',
