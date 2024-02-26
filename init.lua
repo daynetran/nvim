@@ -1,3 +1,2 @@
 require("daynetran")
-vim.cmd("colorscheme elflord")
-print('hello world')
+print('hello from root')

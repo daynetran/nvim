@@ -2,7 +2,6 @@
 
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
-
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -16,23 +15,16 @@ return require('packer').startup(function(use)
 	
 	-- nvim-treesitter interfaces with treesitter in Neovim, provides more
 	-- highlighting and contrast within code.
-	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
+--	use {
+--		'nvim-treesitter/nvim-treesitter',
+--		run = ':TSUpdate'
+--	}
+	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
 	-- colorscheme
-	use ( {
-		"catppuccin/nvim",
-		as = "catppuccin",
-		config = function()
-			vim.cmd('colorscheme catppuccin')
-		end
-	} )
 
 	-- The ability to specify, or on the fly, mark and create persisting 
 	-- key strokes to go to the files you want.
-	use { 'ThePrimeagen/harpoon' } 
 
 	-- Undotree visualizes the undo history and makes it easy to browse 
 	-- and switch between different undo branches
