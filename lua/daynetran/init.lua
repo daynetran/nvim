@@ -1,4 +1,2 @@
-require("daynetran.remap")
-require("daynetran.set")
+require("daynetran.core")
 require("daynetran.lazy")
-print("hello from daynetran")

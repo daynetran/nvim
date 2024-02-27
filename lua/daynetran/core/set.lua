@@ -19,6 +19,7 @@ vim.opt.expandtab = true
 -- enable autoindenting and set it to spaces
 vim.opt.shiftwidth = 4
 vim.opt.smartindent = true
+vim.opt.autoindent = true
 
 -- enable smart indenting
 vim.opt.breakindent = true

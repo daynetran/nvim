@@ -1,9 +1,14 @@
+-- Telescope is a highly extendable fuzzy finder over lists.
+
 return {
   "nvim-telescope/telescope.nvim",
+  tag = "0.1.5",
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
+    "burntsushi/ripgrep",
+    "sharkdp/fd",
+    "nvim-telescope/telescope-fzf-native.nvim",
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
