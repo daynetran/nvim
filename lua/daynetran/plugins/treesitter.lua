@@ -4,5 +4,14 @@
 
 return {
 		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate"
+		build = ":TSUpdate",
+        config = function()
+            local ok, treesitter = pcall(require, "nvim-treesitter.configs")
+            if ok then
+             	treesitter.setup({
+	         	ensure_installed = { "typescript", "css", "javascript", "svelte" },
+	        	highlight = { enable = true },
+	            })
+            end
+        end,
 }
