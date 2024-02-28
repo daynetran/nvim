@@ -3,8 +3,6 @@
 -- smarter code navigation, and structural editing.
 
 return {
-	{
 		"nvim-treesitter/nvim-treesitter",
 		build = ":TSUpdate"
-    }
 }
