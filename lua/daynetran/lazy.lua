@@ -1,5 +1,7 @@
--- Installs Lazy, a modern package manager for NeoVim plugins.
---
+-- https://www.lazyvim.org
+-- A NeoVim setup to make it easy to customzie and extend your config
+-- A modern package manager for NeoVim plugins.
+
 -- Sets a path where lazy is installed, a standard system data directory path 
 -- that appends '/lazy/lazy.nvim'.
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"

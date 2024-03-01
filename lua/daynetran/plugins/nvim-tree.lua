@@ -1,3 +1,6 @@
+-- https://github.com/nvim-tree/nvim-tree.lua
+-- a file explorer tree written in Lua
+
 return {
   "nvim-tree/nvim-tree.lua",
   version = "*",

@@ -7,6 +7,11 @@ vim.opt.guicursor = {
     "sm:block-blinkwait175-blinkoff150-blinkon175", -- showmatch: block cursor with specific blinking settings
 }
 
+
+vim.opt.pumblend = 17
+vim.opt.wildmode = "longest:full"
+vim.opt.wildoptions = "pum"
+
 -- Enable relative line numbers
 vim.opt.nu = true
 vim.opt.relativenumber = true

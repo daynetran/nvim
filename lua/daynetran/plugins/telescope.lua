@@ -1,3 +1,4 @@
+-- https://github.com/nvim-telescope/telescope.nvim
 -- Telescope is a highly extendable fuzzy finder over lists.
 
 return {
@@ -6,10 +7,7 @@ return {
   branch = "0.1.x",
   dependencies = {
     "nvim-lua/plenary.nvim",
-    "burntsushi/ripgrep",
-    "sharkdp/fd",
-    "nvim-telescope/telescope-fzf-native.nvim",
-    "nvim-tree/nvim-web-devicons",
+    {"nvim-telescope/telescope-fzf-native.nvim", build="make"},
   },
   config = function()
     local telescope = require("telescope")
@@ -35,5 +33,6 @@ return {
     keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Fuzzy find recent files" })
     keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
     keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
+    keymap.set("n", "<leader>fgc", "<cmd>Telescope grep_string<cr>", { desc = "Find git commits"})
   end,
 }
