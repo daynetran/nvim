@@ -80,6 +80,6 @@ vim.opt.cursorline = true
 vim.opt.clipboard = "unnamed,unnamedplus"
 
 -- place a column line
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = { "80", "100", "140" }
 
 vim.opt.isfname:append("@-@") 
