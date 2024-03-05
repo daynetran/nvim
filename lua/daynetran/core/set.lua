@@ -1,6 +1,20 @@
--- Set leader key to `space`.
+-- Set <space> as the leader key.
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+-- Enable relative line numbers.
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+-- Enable mouse support for all modes.
+vim.opt.mouse = "a"
+
+-- Do not show the mode, because it is already in the status line.
+vim.opt.showmode = false
+
+-- Configure how NeoVim displays certain whitespace.
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 vim.opt.guicursor = {
     "n-v-c:block", -- normal, visual, command-line: block cursor
@@ -13,14 +27,10 @@ vim.opt.guicursor = {
 
 vim.opt.title = true
 
-vim.opt.pumblend = 17
+-- Set the popup menu blend to 20% opacity.
+vim.opt.pumblend = 20
 vim.opt.wildmode = "longest:full"
 vim.opt.wildoptions = "pum"
-
-
--- Enable relative line numbers.
-vim.opt.nu = true
-vim.opt.relativenumber = true
 
 -- Set 1 tab to 4 spaces.
 vim.opt.tabstop = 4
@@ -43,15 +53,13 @@ vim.opt.wrap = false
 vim.opt.splitbelow = true
 vim.opt.splitright = true
 
--- Enable mouse support for all modes.
-vim.opt.mouse = "a"
-
--- Ignore case but override if the search pattern contains upper case characters.
+-- Configure case-insensitive search unless the search contains upper case characters.
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
--- decrease updatetime to 200 ms
-vim.opt.updatetime = 50
+-- Decrease updatetime to 200 ms.
+vim.opt.updatetime = 200
+vim.opt.timeoutlen = 300
 
 -- Configures a better completion experience.
 -- "menuone" enables the autocomplete popup menu. 
@@ -76,9 +84,13 @@ vim.opt.signcolumn = "yes"
 vim.opt.cursorline = true
 
 -- Enable access to system clipboard.
-vim.opt.clipboard = "unnamed,unnamedplus"
+vim.opt.clipboard = "unnamedplus"
 
 -- place a column line
 vim.opt.colorcolumn = { "80", "100", "140" }
 
+-- Preview substitutions live while typing.
+vim.opt.inccommand = 'split'
+
 vim.opt.isfname:append("@-@")
+
